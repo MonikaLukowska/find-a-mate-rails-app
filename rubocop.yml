@@ -1,0 +1,49 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - spec/**/*
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 15
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 30
+  Exclude:
+    - spec/**/*
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 100
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - bin/**/*
+    - node_modules/**/*
+  NewCops: enable
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
